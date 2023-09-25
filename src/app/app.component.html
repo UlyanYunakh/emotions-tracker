@@ -5,14 +5,13 @@
             <div id="frame_partial">
                 <app-emotion-selector></app-emotion-selector>
                 <div style="background-color: #FFF;">
-                    <div class="date">{{ getDate() | date:'longDate' : '' : 'ru-RU' }}</div>
+                    <div class="date">{{ currentDate | date:'longDate' : '' : 'ru-RU' }}</div>
                 </div>
             </div>
             <app-description-field (onValueChangeEvent)="onDescriptionUpdate($event)"></app-description-field>
         </div>
         <div class="buttons-container">
-            <button (click)="saveImage()">Сохранить картинку</button>
-            <button (click)="copyImage()">Копировать картинку</button> 
+            <button (click)="saveImage()">Сохранить картинку</button> 
             <button (click)="shareImage()">Поделится картинкой</button>   
         </div>
     </div>

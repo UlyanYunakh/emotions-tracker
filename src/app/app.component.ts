@@ -10,6 +10,8 @@ var FileSaver = require('file-saver');
 export class AppComponent implements AfterViewInit {
   currentDescription = '';
 
+  currentDate = Date.now();
+
   ngAfterViewInit(): void {
     this.onResize(new Event(''));
   }
@@ -35,17 +37,6 @@ export class AppComponent implements AfterViewInit {
       });
   }
 
-  copyImage() {
-    this.getBlob()
-      .then(function (blob: any) {
-        navigator.clipboard.write([
-          new ClipboardItem({
-            'image/png': blob
-          })
-        ]);
-      });
-  }
-
   shareImage() {
     this.getBlob()
       .then(function (blob: any) {
@@ -67,35 +58,18 @@ export class AppComponent implements AfterViewInit {
 
   @HostListener('window:resize', ['$event'])
   onResize(event: Event) {
-    var width = document.getElementById('emotions')?.offsetWidth || -1;
-    var height = document.getElementById('emotions')?.offsetHeight || -1;
-    var windowWidth = window.outerWidth;
-    var windowHeight = window.outerHeight;
-    var r = 1;
-    r = Math.min(windowWidth / width, windowHeight / height);
+    var width = document.getElementById('frame')?.offsetWidth || -1;
+    var outerWidth = document.getElementById('emotions')?.offsetWidth || -1;
 
-    let el = document.getElementById('emotions');
-    if (el) {
-      el.style.transform = `scale(${r})`;
+    var scale = outerWidth < width ? outerWidth / width : 1;
+
+    let frame = document.getElementById('frame');
+    if (frame) {
+      frame.style.transform = `scale(${scale})`;
+      frame.style.transformOrigin = 'top';
+
+      let height = frame.offsetHeight * scale;
+      frame.style.height = `${height}px`;
     }
-    // document.getElementById('container')?.style = `-moz-transform: scale(${r})`;
-    // document.getElementById('container')?.style = `-ms-transform: scale(${r})`;
-    // document.getElementById('container')?.style = `-o-transform: scale(${r})`;
-    // document.getElementById('container')?.style = `transform: scale(${r})`;
-
-    // let scaledContent = document.getElementById('emotions');
-    // let scaledWrapper  = document.getElementById('container');
-
-    // if (scaledContent && scaledWrapper) {
-    //   scaledContent.style.transform = 'scale(1, 1)';
-
-    //   let { width: cw, height: ch } = scaledContent.getBoundingClientRect();
-    //   let { width: ww, height: wh } = scaledWrapper.getBoundingClientRect();
-    
-    //   let scaleAmtX = Math.min(ww / cw, wh / ch);
-    //   let scaleAmtY = scaleAmtX;
-    
-    //   scaledContent.style.transform = `scale(${scaleAmtX}, ${scaleAmtY})`;
-    // }
   }
 }
