@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { AfterViewInit, Component, HostListener } from '@angular/core';
 var domtoimage = require('dom-to-image-more');
 var FileSaver = require('file-saver');
 
@@ -7,8 +7,12 @@ var FileSaver = require('file-saver');
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.less']
 })
-export class AppComponent {
+export class AppComponent implements AfterViewInit {
   currentDescription = '';
+
+  ngAfterViewInit(): void {
+    this.onResize(new Event(''));
+  }
 
   onDescriptionUpdate(str: string) {
     this.currentDescription = str;
@@ -63,20 +67,35 @@ export class AppComponent {
 
   @HostListener('window:resize', ['$event'])
   onResize(event: Event) {
-    debugger;
-    let scaledContent = document.getElementById('emotions');
-    let scaledWrapper  = document.getElementById('container');
+    var width = document.getElementById('emotions')?.offsetWidth || -1;
+    var height = document.getElementById('emotions')?.offsetHeight || -1;
+    var windowWidth = window.outerWidth;
+    var windowHeight = window.outerHeight;
+    var r = 1;
+    r = Math.min(windowWidth / width, windowHeight / height);
 
-    if (scaledContent && scaledWrapper) {
-      scaledContent.style.transform = 'scale(1, 1)';
-
-      let { width: cw, height: ch } = scaledContent.getBoundingClientRect();
-      let { width: ww, height: wh } = scaledWrapper.getBoundingClientRect();
-    
-      let scaleAmtX = Math.min(ww / cw, wh / ch);
-      let scaleAmtY = scaleAmtX;
-    
-      scaledContent.style.transform = `scale(${scaleAmtX}, ${scaleAmtY})`;
+    let el = document.getElementById('emotions');
+    if (el) {
+      el.style.transform = `scale(${r})`;
     }
+    // document.getElementById('container')?.style = `-moz-transform: scale(${r})`;
+    // document.getElementById('container')?.style = `-ms-transform: scale(${r})`;
+    // document.getElementById('container')?.style = `-o-transform: scale(${r})`;
+    // document.getElementById('container')?.style = `transform: scale(${r})`;
+
+    // let scaledContent = document.getElementById('emotions');
+    // let scaledWrapper  = document.getElementById('container');
+
+    // if (scaledContent && scaledWrapper) {
+    //   scaledContent.style.transform = 'scale(1, 1)';
+
+    //   let { width: cw, height: ch } = scaledContent.getBoundingClientRect();
+    //   let { width: ww, height: wh } = scaledWrapper.getBoundingClientRect();
+    
+    //   let scaleAmtX = Math.min(ww / cw, wh / ch);
+    //   let scaleAmtY = scaleAmtX;
+    
+    //   scaledContent.style.transform = `scale(${scaleAmtX}, ${scaleAmtY})`;
+    // }
   }
 }
