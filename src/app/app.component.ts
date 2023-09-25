@@ -1,4 +1,5 @@
 import { AfterViewInit, Component, HostListener } from '@angular/core';
+import { error } from 'console';
 var domtoimage = require('dom-to-image-more');
 var FileSaver = require('file-saver');
 
@@ -27,6 +28,9 @@ export class AppComponent implements AfterViewInit {
         let node = document.getElementById(id);
 
         return domtoimage.toBlob(node);
+      })
+      .catch(error => {
+        alert('Произошла ошибка, попробуйте воспользоваться приложением в другом браузере.');
       });
   }
 
