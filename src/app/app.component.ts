@@ -56,7 +56,6 @@ export class AppComponent implements AfterViewInit {
     return Date.now();
   }
 
-  @HostListener('window:resize', ['$event'])
   onResize(event: Event) {
     var width = document.getElementById('frame')?.offsetWidth || -1;
     var outerWidth = document.getElementById('emotions')?.offsetWidth || -1;
