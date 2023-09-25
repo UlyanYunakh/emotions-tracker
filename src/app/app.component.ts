@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 var domtoimage = require('dom-to-image-more');
 var FileSaver = require('file-saver');
 
@@ -59,5 +59,24 @@ export class AppComponent {
 
   getDate() {
     return Date.now();
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: Event) {
+    debugger;
+    let scaledContent = document.getElementById('emotions');
+    let scaledWrapper  = document.getElementById('container');
+
+    if (scaledContent && scaledWrapper) {
+      scaledContent.style.transform = 'scale(1, 1)';
+
+      let { width: cw, height: ch } = scaledContent.getBoundingClientRect();
+      let { width: ww, height: wh } = scaledWrapper.getBoundingClientRect();
+    
+      let scaleAmtX = Math.min(ww / cw, wh / ch);
+      let scaleAmtY = scaleAmtX;
+    
+      scaledContent.style.transform = `scale(${scaleAmtX}, ${scaleAmtY})`;
+    }
   }
 }
