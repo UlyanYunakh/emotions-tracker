@@ -27,7 +27,7 @@ export class AppComponent {
   saveImage() {
     this.getBlob()
       .then(function (blob: any) {
-        FileSaver.saveAs(blob, 'Мои эмоции.png');
+        FileSaver.saveAs(blob, `Мои эмоции (${new Date().toISOString()}).png`);
       });
   }
 
@@ -49,7 +49,7 @@ export class AppComponent {
           title: "Эмоции",
           text: "Моя таблица эмоций",
           files: [
-            new File([blob], 'Мои эмоции.png', {
+            new File([blob], `Мои эмоции (${new Date().toISOString()}).png`, {
               type: blob.type,
             }),
           ],
