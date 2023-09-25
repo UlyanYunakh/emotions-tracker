@@ -43,7 +43,7 @@ export class EmotionSelectorComponent implements OnChanges {
     },
     {
       colors: ['#C5BEDD','#BFAFD4','#B7A5CF','#A995C6','#9F8AC2','#977EB8','#8B72B3','#8567AD','#8164A7','#7A5EA8'],
-      emotions: ['Скука', 'неудовольствие', 'Отвращение'],
+      emotions: ['Скука', 'Неудовольствие', 'Отвращение'],
     },
     {
       colors: ['#F7BDCC','#F9AFC8','#F59FC4','#F091BB','#F07FB3','#F075AE','#ED67A4','#ED579E','#EC4F9E','#EE4298'],

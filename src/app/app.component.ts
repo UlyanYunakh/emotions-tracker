@@ -8,32 +8,56 @@ var FileSaver = require('file-saver');
   styleUrls: ['./app.component.less']
 })
 export class AppComponent {
+  currentDescription = '';
+
+  onDescriptionUpdate(str: string) {
+    this.currentDescription = str;
+  }
+
+  getBlob() {
+    return Promise.resolve()
+      .then(() => {
+        let id = this.currentDescription.length > 0 ? 'frame' : 'frame_partial';
+        let node = document.getElementById(id);
+
+        return domtoimage.toBlob(node);
+      });
+  }
 
   saveImage() {
-    let node = document.getElementById('frame');
-
-    domtoimage
-      .toBlob(node)
+    this.getBlob()
       .then(function (blob: any) {
-        FileSaver.saveAs(blob, 'my-node.png');
+        FileSaver.saveAs(blob, 'Мои эмоции.png');
+      });
+  }
+
+  copyImage() {
+    this.getBlob()
+      .then(function (blob: any) {
+        navigator.clipboard.write([
+          new ClipboardItem({
+            'image/png': blob
+          })
+        ]);
       });
   }
 
   shareImage() {
-    let node = document.getElementById('frame');
-
-    domtoimage
-      .toBlob(node)
+    this.getBlob()
       .then(function (blob: any) {
         navigator.share({
           title: "Эмоции",
           text: "Моя таблица эмоций",
           files: [
-            new File([blob], 'МоиЭмоции.png', {
+            new File([blob], 'Мои эмоции.png', {
               type: blob.type,
             }),
           ],
         });
       });
+  }
+
+  getDate() {
+    return Date.now();
   }
 }
