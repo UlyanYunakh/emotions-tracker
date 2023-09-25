@@ -1,9 +1,19 @@
 .emotions {
     margin: auto;
-    max-width: 600px;
+    width: 600px;
     display: flex;
     flex-direction: column;
     background-color: #FFF;
+}
+
+@media screen and (max-width: 500px) {
+    .emotions {
+        transform: scale(0.7);
+        width: auto;
+    }
+    .date {
+        width: auto;
+    }
 }
 
 .date {
