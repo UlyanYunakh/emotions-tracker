@@ -17,7 +17,13 @@
 button {
     margin: 0 5px;
     padding: 8px 10px;
-    border: solid 1px #111;
+    border: 0;
+    background-color: #FFF;
+
+    img {
+        width: 40px;
+        height: 40px;
+    }
 
     &:hover {
         cursor: pointer;
@@ -26,6 +32,9 @@ button {
 
 .buttons-container {
     margin: auto;
+    margin-top: 5px;
+    width: 520px;
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
 }

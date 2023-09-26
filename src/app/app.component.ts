@@ -66,7 +66,7 @@ export class AppComponent implements AfterViewInit {
 
     var scale = outerWidth < width ? outerWidth / width : 1;
 
-    let frame = document.getElementById('frame');
+    let frame = document.getElementById('emotions');
     if (frame) {
       frame.style.transform = `scale(${scale})`;
       frame.style.transformOrigin = 'top';

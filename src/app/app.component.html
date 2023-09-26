@@ -1,6 +1,7 @@
 <div id="container">
     
     <div class="emotions" id="emotions">
+        <h3>Мои эмоции</h3>
         <div id="frame">
             <div id="frame_partial">
                 <app-emotion-selector></app-emotion-selector>
@@ -11,8 +12,12 @@
             <app-description-field (onValueChangeEvent)="onDescriptionUpdate($event)"></app-description-field>
         </div>
         <div class="buttons-container">
-            <button (click)="saveImage()">Сохранить картинку</button> 
-            <button (click)="shareImage()">Поделится картинкой</button>   
+            <button (click)="saveImage()" title="Сохранить картинку">
+                <img src="../assets/download.png">
+            </button> 
+            <button (click)="shareImage()" title="Поделится картинкой">
+                <img src="../assets/share.png">
+            </button>   
         </div>
     </div>
 
