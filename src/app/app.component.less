@@ -6,6 +6,16 @@
     background-color: #FFF;
 }
 
+.header::after{
+    content: '';
+    background-image: url('../assets/favicon.png');
+    position: absolute;
+    background-size: 32px;
+    width: 32px;
+    height: 32px;
+    top: 10px;
+}
+
 .date {
     width: 520px;
     margin: auto;
@@ -18,7 +28,8 @@ button {
     margin: 0 5px;
     padding: 8px 10px;
     border: 0;
-    background-color: #FFF;
+    background-color: #e3ebf3;
+    border-radius: 100%;    
 
     img {
         width: 40px;
@@ -27,6 +38,7 @@ button {
 
     &:hover {
         cursor: pointer;
+        background-color: #d0e1f2;
     }
 }
 

@@ -1,12 +1,11 @@
 <div id="container">
-    
     <div class="emotions" id="emotions">
-        <h3>Мои эмоции</h3>
+        <h3 class="header">Мои эмоции</h3>
         <div id="frame">
             <div id="frame_partial">
                 <app-emotion-selector></app-emotion-selector>
                 <div style="background-color: #FFF;">
-                    <div class="date">{{ currentDate | date:'longDate' : '' : 'ru-RU' }}</div>
+                    <div class="date">{{ currentDate | date: 'HH:mm, EEEE, MMMM d, y' : '' : 'ru-RU'}}</div>
                 </div>
             </div>
             <app-description-field (onValueChangeEvent)="onDescriptionUpdate($event)"></app-description-field>
@@ -20,6 +19,5 @@
             </button>   
         </div>
     </div>
-
 </div>
 

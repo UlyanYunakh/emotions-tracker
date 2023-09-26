@@ -1,5 +1,6 @@
-import { AfterViewInit, Component, HostListener } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { error } from 'console';
+import { timer } from 'rxjs';
 var domtoimage = require('dom-to-image-more');
 var FileSaver = require('file-saver');
 
@@ -8,10 +9,16 @@ var FileSaver = require('file-saver');
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.less']
 })
-export class AppComponent implements AfterViewInit {
+export class AppComponent implements AfterViewInit, OnInit {
   currentDescription = '';
 
-  currentDate = Date.now();
+  currentDate: Date = new Date();
+
+  ngOnInit(): void {
+    timer(0, 1000).subscribe(() => {
+      this.currentDate = new Date();
+    })
+  }
 
   ngAfterViewInit(): void {
     this.onResize(new Event(''));
