@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1695753715192,
+  "timestamp": 1695754090466,
   "index": "https://ulyanyunakh.github.io/emotions/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "https://ulyanyunakh.github.io/emotions/favicon.ico",
         "https://ulyanyunakh.github.io/emotions/index.html",
-        "https://ulyanyunakh.github.io/emotions/main.7efc18f117f7a7be.js",
+        "https://ulyanyunakh.github.io/emotions/main.b6b7c4a8281da28a.js",
         "https://ulyanyunakh.github.io/emotions/manifest.webmanifest",
         "https://ulyanyunakh.github.io/emotions/polyfills.c39243320e3e32f7.js",
         "https://ulyanyunakh.github.io/emotions/runtime.0efdf429d2a55ca7.js",
@@ -61,8 +61,8 @@
     "https://ulyanyunakh.github.io/emotions/assets/share.png": "5c187fe7ad42ebc15b4be4f0f6a1448c982472ce",
     "https://ulyanyunakh.github.io/emotions/favicon.4f6cbbadd20b091c.png": "615f2ca0e0c9592ead055f5f0e87a69f92618183",
     "https://ulyanyunakh.github.io/emotions/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "https://ulyanyunakh.github.io/emotions/index.html": "fea2f37f0d50b5668eb910b736cb6be2a875f415",
-    "https://ulyanyunakh.github.io/emotions/main.7efc18f117f7a7be.js": "5d3dd7821fe2c249d2bdb7d5d1ad6631528690e3",
+    "https://ulyanyunakh.github.io/emotions/index.html": "844d08691fccb9d7859615463e6bb56bcb35b037",
+    "https://ulyanyunakh.github.io/emotions/main.b6b7c4a8281da28a.js": "7f5a97b45eee8c87dabeaae7177a2ff97d0bedf6",
     "https://ulyanyunakh.github.io/emotions/manifest.webmanifest": "5cc49ca73bdebdd6d05225d034d184e4a0556f12",
     "https://ulyanyunakh.github.io/emotions/polyfills.c39243320e3e32f7.js": "ad42d80abf8b6765a2bb0b54b245343fbe20f522",
     "https://ulyanyunakh.github.io/emotions/runtime.0efdf429d2a55ca7.js": "04a180833fb1004d275bb2d87ac02309a32b5f0d",
