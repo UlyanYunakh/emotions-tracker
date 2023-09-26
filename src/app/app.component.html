@@ -5,7 +5,7 @@
             <div id="frame_partial">
                 <app-emotion-selector></app-emotion-selector>
                 <div style="background-color: #FFF;">
-                    <div class="date">{{ currentDate | date: 'HH:mm, EEEE, MMMM d, y' : '' : 'ru-RU'}}</div>
+                    <div class="date">{{ currentDate | date: 'HH:mm, EEEE, d MMMM, y' : '' : 'ru-RU'}}</div>
                 </div>
             </div>
             <app-description-field (onValueChangeEvent)="onDescriptionUpdate($event)"></app-description-field>
