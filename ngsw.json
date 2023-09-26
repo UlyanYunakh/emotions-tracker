@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1695678806052,
+  "timestamp": 1695721549417,
   "index": "https://ulyanyunakh.github.io/emotions/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "https://ulyanyunakh.github.io/emotions/favicon.ico",
         "https://ulyanyunakh.github.io/emotions/index.html",
-        "https://ulyanyunakh.github.io/emotions/main.9e3221b2dbd0e9d2.js",
+        "https://ulyanyunakh.github.io/emotions/main.cd23abbe736fd249.js",
         "https://ulyanyunakh.github.io/emotions/manifest.webmanifest",
         "https://ulyanyunakh.github.io/emotions/polyfills.c39243320e3e32f7.js",
         "https://ulyanyunakh.github.io/emotions/runtime.0efdf429d2a55ca7.js",
@@ -29,6 +29,7 @@
         "ignoreVary": true
       },
       "urls": [
+        "https://ulyanyunakh.github.io/emotions/assets/download.png",
         "https://ulyanyunakh.github.io/emotions/assets/icons/icon-128x128.png",
         "https://ulyanyunakh.github.io/emotions/assets/icons/icon-144x144.png",
         "https://ulyanyunakh.github.io/emotions/assets/icons/icon-152x152.png",
@@ -41,6 +42,7 @@
         "https://ulyanyunakh.github.io/emotions/assets/select-black.png",
         "https://ulyanyunakh.github.io/emotions/assets/select-red-pencil.png",
         "https://ulyanyunakh.github.io/emotions/assets/select-red.png",
+        "https://ulyanyunakh.github.io/emotions/assets/share.png",
         "https://ulyanyunakh.github.io/emotions/select-black.82f07f6b8f364fe7.png"
       ],
       "patterns": []
@@ -48,22 +50,24 @@
   ],
   "dataGroups": [],
   "hashTable": {
-    "https://ulyanyunakh.github.io/emotions/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
-    "https://ulyanyunakh.github.io/emotions/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
-    "https://ulyanyunakh.github.io/emotions/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
-    "https://ulyanyunakh.github.io/emotions/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
-    "https://ulyanyunakh.github.io/emotions/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
-    "https://ulyanyunakh.github.io/emotions/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
-    "https://ulyanyunakh.github.io/emotions/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
-    "https://ulyanyunakh.github.io/emotions/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "https://ulyanyunakh.github.io/emotions/assets/download.png": "6a999b2787f747baee1ed90a97547bb9abbbbfd1",
+    "https://ulyanyunakh.github.io/emotions/assets/icons/icon-128x128.png": "929156bf9b3ac001414265e78296800800dac1ce",
+    "https://ulyanyunakh.github.io/emotions/assets/icons/icon-144x144.png": "929156bf9b3ac001414265e78296800800dac1ce",
+    "https://ulyanyunakh.github.io/emotions/assets/icons/icon-152x152.png": "929156bf9b3ac001414265e78296800800dac1ce",
+    "https://ulyanyunakh.github.io/emotions/assets/icons/icon-192x192.png": "929156bf9b3ac001414265e78296800800dac1ce",
+    "https://ulyanyunakh.github.io/emotions/assets/icons/icon-384x384.png": "41777f9f4996d82892291529f2e6932b34d16d48",
+    "https://ulyanyunakh.github.io/emotions/assets/icons/icon-512x512.png": "a2bccd498e989f1a5d6e2fac34d4c6701e43c6eb",
+    "https://ulyanyunakh.github.io/emotions/assets/icons/icon-72x72.png": "2435c60cb1e1985b3a8e4cc76c6abf87adf9ed40",
+    "https://ulyanyunakh.github.io/emotions/assets/icons/icon-96x96.png": "2435c60cb1e1985b3a8e4cc76c6abf87adf9ed40",
     "https://ulyanyunakh.github.io/emotions/assets/select-black-pencil.png": "65ff9c45c5e0a1636592523325cceca5eda9e762",
     "https://ulyanyunakh.github.io/emotions/assets/select-black.png": "5203c83f0499cd07d045cbc55a9ae6150a8ce220",
     "https://ulyanyunakh.github.io/emotions/assets/select-red-pencil.png": "26108cced0be4901468743330ec50bac2495b511",
     "https://ulyanyunakh.github.io/emotions/assets/select-red.png": "3921b3ddc414c8703786323fa7d8f21bcd159d25",
+    "https://ulyanyunakh.github.io/emotions/assets/share.png": "5c187fe7ad42ebc15b4be4f0f6a1448c982472ce",
     "https://ulyanyunakh.github.io/emotions/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "https://ulyanyunakh.github.io/emotions/index.html": "7132d65c0b373472b4f703ad7e7c9194bbb89413",
-    "https://ulyanyunakh.github.io/emotions/main.9e3221b2dbd0e9d2.js": "fb2cd47a40ed0b7c2c5694c58548d962a81f7860",
-    "https://ulyanyunakh.github.io/emotions/manifest.webmanifest": "a53c72c62a7517a52fc8cc13c3ba2c8fa899869d",
+    "https://ulyanyunakh.github.io/emotions/index.html": "95b7ba873fcf569d4e597c535d00cf2f8fbaa124",
+    "https://ulyanyunakh.github.io/emotions/main.cd23abbe736fd249.js": "837714dd24d4b6a3f21e3555a6ba9f958e6e2125",
+    "https://ulyanyunakh.github.io/emotions/manifest.webmanifest": "2435126fadd3996fc208dddee5465c273b8a1e44",
     "https://ulyanyunakh.github.io/emotions/polyfills.c39243320e3e32f7.js": "ad42d80abf8b6765a2bb0b54b245343fbe20f522",
     "https://ulyanyunakh.github.io/emotions/runtime.0efdf429d2a55ca7.js": "04a180833fb1004d275bb2d87ac02309a32b5f0d",
     "https://ulyanyunakh.github.io/emotions/select-black.82f07f6b8f364fe7.png": "5203c83f0499cd07d045cbc55a9ae6150a8ce220",
