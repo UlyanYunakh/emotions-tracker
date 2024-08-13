@@ -1,0 +1,11 @@
+<div class="emotion-selector">
+    <ng-container *ngFor="let scale of emotionScalesArray; index as i;">
+        <div class="emotion-selector__item emotion-selector__item_{{i}}">
+            <app-emotion-scale 
+                [colors]="scale.colors"
+                [emotions]="scale.emotions"
+                [initialSelection]="scale.initialSelection || -1"
+            ></app-emotion-scale>
+        </div>
+    </ng-container>
+</div>

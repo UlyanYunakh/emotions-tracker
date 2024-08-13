@@ -1,0 +1,71 @@
+.scale {
+    &-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &-grade {
+        display: flex;
+        flex-direction: row;
+
+        &__item {
+            width: 50px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: solid 1px black;
+            border-right: 0;
+            position: relative;
+
+            &_3, &_6 {
+                width: 60px;
+            }
+
+            &_selected {
+                background-image: url('../../assets/select-black.png');
+                background-size: 55px;
+                position: absolute;
+                width: 55px; 
+                height: 55px;
+            }
+        }
+        
+        &__item:hover {
+            cursor: pointer;
+        }
+
+        &__item:last-child {
+            border-right: solid 1px black;
+        }
+    }
+
+    &-emotions {
+        display: flex;
+        flex-direction: row;
+
+        &__item {
+            width: 183px;
+            height: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: solid 1px black;
+            border-top: 0;
+            border-right: 0;
+            background-color: #FFF;
+
+            &_1 {
+                width: 160px;
+            }
+
+            &_2 {
+                width: 184px;
+            }
+        }
+
+        &__item:last-child {
+            border-right: solid 1px black;
+        }
+    }
+}

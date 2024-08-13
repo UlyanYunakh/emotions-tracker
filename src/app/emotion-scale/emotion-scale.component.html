@@ -1,0 +1,21 @@
+<div class="scale-container">
+    <div class="scale-grade">
+        <ng-container *ngFor="let color of colors; index as i;">
+            <div 
+                class="scale-grade__item scale-grade__item_{{i}}" 
+                [ngStyle]="{'background-color': color }"
+                (click)="selectGrade(i)"
+            >
+                {{ i + 1 }}
+                <span class="selection-node"></span>
+            </div>
+        </ng-container>
+    </div>
+    <div class="scale-emotions">
+        <ng-container *ngFor="let emotion of emotions; index as i;">
+            <div class="scale-emotions__item scale-emotions__item_{{i}}">
+                {{ emotion }}
+            </div>
+        </ng-container>
+    </div>
+</div>
